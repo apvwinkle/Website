@@ -6,17 +6,15 @@
 /* General Formatting */
 body {
 	font-family: Arial, Helvetica, sans-serif ;
+	margin:0;
+	padding:0;
+	border:0;
 }
 img {
 	width: auto ;
 	max-width: 100% ;
 	height: auto ;
 }
-DIV.centered {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
- }
 h1 {
 	margin: 0 ;
 }
@@ -27,80 +25,69 @@ h2 {
  
 /* Screen-size Specific Formatting */
 @media screen and (max-width: 481px) {
-    div#column1, div#column2, div#column3 {
-	    margin-left:auto ;
+	div.column{
+		margin-left:auto ;
 	    margin-right:auto ;
 		width:100% ;
 	}
-	div#footer {
-		clear: both ;
-	}
 }
 @media screen and (min-width: 482px) and (max-width: 1000px) {
-	div#column1 {
+	div.column {
 		float: left ;
 		width: 50% ;
-	}
-	div#column2 {
-		float: left ;
-		width: 50% ;
-	}
-	div#column3 {
-		margin-left:auto ;
-		margin-right:auto ;
-		width:50% ;
-	}
-		div#footer {
-		clear: both ;
 	}
 }
 @media screen and (min-width: 1001px) {
-	div#column1 {
+	div.column {
 		float: left ;
 		width: 33% ;
-	}
-	div#column2 {
-		float: left ;
-		width: 33% ;
-	}
-	div#column3 {
-		float: left ;
-		width: 33%
-	}
-	div#footer {
-		clear: both ;
 	}
 }
 
-/* Div Style Formatting */
-div#proper {
+/* Class Formatting */
+div.proper {
+	color: #000 ;
+	background-color: #F19CBB ;
 	padding-left: .5em ;
 	padding-right: .5em ;
 }
-div#boxed {
+div.boxed {
   border: .2em solid lightslategray;
 }
+div.centered {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+body.homescreen {
+	background-image: url("background.jpg");
+	background-position: center 50%;
+	background-attachment: fixed;
+	background-color: #cccccc;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Div Formatting */
 div#container {
 	color: inherit ;
+	background-image: inherit
 	background-color: inherit ;
 }
-div#rightcol, div#middlethird {
-	color: #000 ;
-	background-color: #F19CBB ;
-}
-div#leftcol, div#leftthird {
-	color: #000 ;
-	background-color: #fff ;
-}
-div#centerbot, div#rightthird {
-	color: #000 ;
-	background-color: #AB92B3 ;
-}
 div#header {
-	color: #fff ;
-	background-color: #AB92B3 ;
+	height: 4em;
+	color: #AB92B3 ;
+	background-color: #00563B ;
+}
+div#navigation {
+	float: right;
+	position: relative ;
+	top: 50% ;
+	transform: translate(0, -50%) ;
+	font-size: 1.2em ;
 }
 div#footer {
+	clear: both ;
 	color: #fff ;
 	background-color: #000 ;
 }
